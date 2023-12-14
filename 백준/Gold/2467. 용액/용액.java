@@ -36,6 +36,12 @@ public class Main {
         }
     }
 
+    /**
+     * 투포인터 비스무리하게 푼 것 같긴한데
+     * 많이 이상한 코드 ,,,
+     * 
+     * 0과 가장 가까운 데이터부터 시작해서 start -> 0, end -> n-1로 수렴하는 방식 (투포인터??)
+     */
     static void solve() {
 
         if(N==2) {
@@ -43,15 +49,15 @@ public class Main {
             result2 = solutions[1];
             return;
         }
-        
+
         int start = 0; int end = 0;
-        
+
         if(closeZero==0) {
             start = closeZero; end = closeZero+1;
         } else {
             start = closeZero-1; end = closeZero;
         }
-        
+
         minDiff = Integer.MAX_VALUE;
 
         while(!(start<0 && end>N-1)) {
