@@ -1,19 +1,18 @@
 import java.util.*;
 import java.io.*;
+import java.math.*;
 
 public class Main {
     static BufferedReader br;
     static StringTokenizer stn;
     
-    static Long A, B;
-    
     public static void main(String[] args) throws IOException {
         br = new BufferedReader(new InputStreamReader(System.in));
         stn = new StringTokenizer(br.readLine());
         
-        A = Long.parseLong(stn.nextToken());
-        B = Long.parseLong(stn.nextToken());
+        BigInteger A = new BigInteger(stn.nextToken());
+        BigInteger B = new BigInteger(stn.nextToken());
         
-        System.out.println(A+B);
+        System.out.println(A.add(B));
     }
 }
