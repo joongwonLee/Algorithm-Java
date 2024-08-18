@@ -11,6 +11,6 @@ public class Main {
         int d1 = Integer.parseInt(stn.nextToken());
         int d2 = Integer.parseInt(stn.nextToken());
         
-        System.out.println(Math.pow(K, 2) - Math.pow((Math.max(d1, d2)-Math.min(d1, d2))/2, 2));
+        System.out.println(Math.pow(K, 2) - Math.pow((double)(d1-d2)/2, 2));
     }
 }
